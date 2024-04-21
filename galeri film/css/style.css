@@ -1,0 +1,309 @@
+* .chau-philomene {
+  font-family: "Chau Philomene One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+body {
+  background-color: #333146;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 80px;
+  letter-spacing: 8px;
+}
+
+.navbox {
+  position: relative;
+  display: inline-block;
+  background-color: rgb(61, 60, 71);
+  height: 64px;
+  width: 160px;
+  border-radius: 10%;
+  opacity: 0.8;
+  margin: 50px 15px 0px;
+  padding: 15px;
+  opacity: 1;
+  z-index: 10;
+}
+
+.navbox2 .icons {
+  font-size: 50px;
+  position: relative;
+  display: inline-block;
+  background-color: rgba(61, 60, 71, 0);
+  height: 64px;
+  width: 50px;
+  opacity: 1;
+  z-index: 10;
+}
+
+.active {
+  opacity: 0.3;
+}
+
+.navbox:hover {
+  opacity: 0.5;
+}
+
+.icons:hover {
+  color: white;
+  opacity: 0.5;
+}
+
+.navbox:active {
+  opacity: 0.3;
+}
+
+main {
+  width: 1200px;
+  height: 1000px;
+  margin: 50px auto;
+  background-color: antiquewhite;
+  border-radius: 5%;
+  box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.8);
+}
+
+.gallery li {
+  float: left;
+  width: 86px;
+  height: 128px;
+}
+
+.gallery img {
+  border-radius: 10%;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.gallery .top {
+  position: relative;
+  display: inline-block;
+  margin-top: 50px;
+  width: 100%;
+  margin-bottom: 0px;
+  float: none;
+}
+
+.gallery .top li {
+  float: none;
+  width: 159px;
+  height: 236px;
+  margin-left: 510px;
+}
+
+.gallery .top img {
+  position: relative;
+  z-index: 10;
+  background-color: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery .top span {
+  display: block;
+  width: 159px;
+  height: 236px;
+  background-color: rgba(200, 200, 200, 0.7);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 300px;
+  color: #333;
+  text-shadow: 1px 1px 1px #ddd;
+  opacity: 0;
+  border-radius: 10%;
+  z-index: 15;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery .top p {
+  position: absolute;
+  width: 140px;
+  text-indent: 10%;
+  text-align: left;
+  top: 0;
+  bottom: 0;
+  background-color: #333146;
+  color: white;
+  z-index: 5;
+  border-radius: 10%;
+  padding: 10px;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.gallery .top a:hover img {
+  transform: translateX(-79px);
+}
+
+.gallery .top a:hover p {
+  animation: smooth-right 0.5s ease-in-out forwards;
+}
+
+.gallery .top a:hover span {
+  opacity: 0.7;
+  transform: translateX(-79px);
+}
+
+.gallery .other {
+  margin: 50px 40px;
+  position: relative;
+}
+
+.other img {
+  position: relative;
+  z-index: 10;
+}
+
+.gallery .other span {
+  display: block;
+  width: 86px;
+  height: 128px;
+  background-color: rgba(200, 200, 200, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  line-height: 128px;
+  color: #333;
+  text-shadow: 1px 1px 1px #ddd;
+  opacity: 0;
+  border-radius: 10%;
+  z-index: 15;
+  transition: opacity 0.3s ease;
+}
+
+.gallery .other a:hover span {
+  opacity: 0.7;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+.overlay:target {
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.overlay img {
+  max-height: 80%;
+  border-radius: 0%;
+  margin-top: 50px;
+  margin-left: 510px;
+  opacity: 0;
+}
+
+.overlay button a {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  background-color: red;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 10%;
+}
+
+.overlay button {
+  margin-left: 610px;
+  opacity: 0;
+}
+
+.overlay .close a {
+  position: absolute;
+  top: 0;
+  margin-top: 50px;
+  margin-left: 865px;
+  border-radius: 50%;
+  background-color: white;
+  text-decoration: none;
+  font-size: 30px;
+  color: rgba(0, 0, 0);
+  opacity: 0;
+}
+
+.overlay .next a {
+  position: absolute;
+  text-decoration: none;
+  font-size: 100px;
+  color: white;
+  top: 0;
+  margin-top: 250px;
+  margin-left: 900px;
+  opacity: 0;
+}
+
+.overlay .pre a {
+  position: absolute;
+  text-decoration: none;
+  font-size: 100px;
+  color: white;
+  top: 0;
+  margin-top: 250px;
+  margin-left: 430px;
+  opacity: 0;
+}
+
+.overlay:target img {
+  animation: fade 0.5s 0.5s forwards;
+}
+
+.overlay:target a {
+  animation: fade 0.5s 0.5s forwards;
+}
+
+.overlay:target button {
+  animation: fade 0.5s 0.5s forwards;
+}
+
+.top-logo img {
+  border-radius: 0%;
+  position: relative;
+  margin-left: 510px;
+  margin-top: 100px;
+}
+
+.disney img {
+  box-shadow: none;
+}
+
+#other .lainlagi {
+  margin-left: 180px;
+}
+
+#lain {
+  height: 500px;
+}
+
+@keyframes smooth-right {
+  0% {
+    transform: translateX(0);
+    width: 159px;
+    height: 236px;
+  }
+  100% {
+    transform: translateX(85px);
+    width: 318px;
+    height: 118px;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
